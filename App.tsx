@@ -1,14 +1,16 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import 'react-native-gesture-handler';
+import * as React from 'react';
+import RootNavigator from './src/RootNavigation';
+import { SafeAreaView, Text, View } from 'react-native';
 
-const App = () => {
+
+export default function App() {
   return (
-    <View>
-      <Text>App</Text>
-    </View>
-  )
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#ffff' }}>
+      <View style={{ flex: 1 }}>
+       
+        <RootNavigator />
+      </View>
+    </SafeAreaView>
+  );
 }
-
-export default App
-
-const styles = StyleSheet.create({})
