@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Image, View, Pressable, TouchableOpacity, Text } from 'react-native';
-import { icons } from '../Assets/icons';
+import { icons } from '../assets/icons';
 // import { Octicons, AntDesign, SimpleLineIcons, FontAwesome5 } from '@expo/vector-icons';
 
 const Header = () => {
