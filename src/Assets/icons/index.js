@@ -9,4 +9,12 @@ export const icons = {
   heart_fill: require("./heart_fill.png"),
   support: require("./support.png"),
   support_fill: require("./support_fill.png"),
-};
+    //Header assets
+  menu: require('../icons/menu.png'),
+  dropDown: require('../icons/dropDown.png'),
+  badge: require('../icons/badge.png'),
+    //Homescreen
+  search: require('../icons/search.png')
+
+
+}
