@@ -7,11 +7,11 @@ import NetInfo from '@react-native-community/netinfo';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 const Drawer = createDrawerNavigator();
 import { enableScreens } from 'react-native-screens';
-import { CustomTab } from '../Utils/CustomTab';
-
+import { CustomTab } from '../utils/CustomTab';
+import { AppTheme } from '../utils/Apptheme';
 //import SideMenu from '../Utils/Sidemenu';
-import HomeScreen from '../Screens/HomeScreens/HomeScreen';
-import LoginScreen from '../Screens/AuthScreens/LoginScreen';
+import HomeScreen from '../screens/HomeScreens/HomeScreen';
+import LoginScreen from '../screens/AuthScreens/LoginScreen';
 const Stack = createStackNavigator();
 
 
@@ -59,7 +59,7 @@ export default function App() {
     return (
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         {Object.entries({
-         // ...tabs,
+         ...tabs,
           ...tabsInner,
         }).map(([name, component]) => (
           <Stack.Screen key={name} name={name} component={component} />
@@ -82,7 +82,7 @@ export default function App() {
   // };
 
   return (
-    <NavigationContainer >
+    <NavigationContainer  theme={AppTheme}>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
      
         {/* <Stack.Screen name={'InitialScreen'} component={InitialScreen} /> */}

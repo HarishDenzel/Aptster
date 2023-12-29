@@ -9,7 +9,7 @@ import {
   Platform,
 } from "react-native";
 import { DrawerContentScrollView, DrawerItem } from "@react-navigation/drawer";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+
 import { Icon } from "../Components/Icon";
 
 import { StackActions, useIsFocused } from "@react-navigation/native";
