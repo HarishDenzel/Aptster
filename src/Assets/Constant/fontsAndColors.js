@@ -9,8 +9,6 @@ const fontFamily = {
     Roboto_Regular: "Poppins-Regular",
     Poppins_Medium: "Poppins-Medium",
     Poppins_Bold: "Roboto-SemiBold",
-
-   
 }
 
 const fontSize = {
