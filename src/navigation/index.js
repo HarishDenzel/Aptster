@@ -12,6 +12,8 @@ import { AppTheme } from '../utils/Apptheme';
 //import SideMenu from '../Utils/Sidemenu';
 import HomeScreen from '../screens/HomeScreens/HomeScreen';
 import LoginScreen from '../screens/AuthScreens/LoginScreen';
+import AllCatergories from '../screens/HomeScreens/AllCategories';
+
 const Stack = createStackNavigator();
 
 
@@ -26,23 +28,20 @@ export default function App() {
       if (!state.isConnected) {
         alert('Something Went Wrong...');
       }
-     })
+    })
 
   }, []);
 
 
   const beforeLoggedIn = {
-  
-   
     LoginScreen: LoginScreen,
-    
-   
   };
   const tabs = {
     MyTabs: CustomTab,
   };
   const tabsInner = {
-    HomeScreen:HomeScreen
+    HomeScreen: HomeScreen,
+    AllCatergories: AllCatergories
   };
   function AuthStack() {
     return (
@@ -59,7 +58,7 @@ export default function App() {
     return (
       <Stack.Navigator screenOptions={{ headerShown: false }}>
         {Object.entries({
-         ...tabs,
+          ...tabs,
           ...tabsInner,
         }).map(([name, component]) => (
           <Stack.Screen key={name} name={name} component={component} />
@@ -82,14 +81,14 @@ export default function App() {
   // };
 
   return (
-    <NavigationContainer  theme={AppTheme}>
+    <NavigationContainer theme={AppTheme}>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-     
+
         {/* <Stack.Screen name={'InitialScreen'} component={InitialScreen} /> */}
         <Stack.Screen name={'BottomTab'} component={BottomTab} />
         <Stack.Screen name={'AuthStack'} component={AuthStack} />
-      
-        
+
+
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -98,8 +97,8 @@ export default function App() {
 
 const My_Home_Tab = () => {
   return (
-    <Stack.Navigator  screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Home" component={PastSessionScreen} /> 
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="Home" component={PastSessionScreen} />
     </Stack.Navigator>
   );
 };
@@ -108,17 +107,17 @@ export { My_Home_Tab };
 
 const My_club_Tab = () => {
   const tabsInner = {
-    TutorResultScreen : TutorResultScreen
-    
+    TutorResultScreen: TutorResultScreen
+
   };
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="FindTutorScreen" component={FindTutorScreen} />
       {Object.entries({
-          ...tabsInner,
-        }).map(([name, component]) => (
-          <Stack.Screen key={name} name={name} component={component} />
-        ))}
+        ...tabsInner,
+      }).map(([name, component]) => (
+        <Stack.Screen key={name} name={name} component={component} />
+      ))}
     </Stack.Navigator>
   );
 };

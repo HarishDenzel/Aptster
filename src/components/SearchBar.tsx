@@ -1,7 +1,7 @@
 //import liraries
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TextInput, TextInputProps, Image } from 'react-native';
-import { fontSize } from '../Assets/Constant/fontsAndColors';
+import { fontSize } from '../assets/Constant/fontsAndColors';
 import { icons } from '../assets/icons';
 
 // create a component
@@ -14,7 +14,7 @@ const SearchBar = (props: React.JSX.IntrinsicAttributes & React.JSX.IntrinsicCla
                 style={styles.input}
                 value={value}
             />
-            <Image source={icons.search} style={{ height: 32, width: 32, resizeMode: 'contain', marginHorizontal: 5 }} />
+            <Image source={icons.searchHome} style={styles.imageStyle} />
         </View>
     );
 };
@@ -36,7 +36,8 @@ const styles = StyleSheet.create({
         paddingVertical:12,
         letterSpacing: 1,
         flex: 1
-    }
+    },
+    imageStyle:{ height: 32, width: 32, resizeMode: 'contain', marginHorizontal: 5 }
 
 
 });

@@ -9,19 +9,20 @@ export const icons = {
   heart_fill: require("./heart_fill.png"),
   support: require("./support.png"),
   support_fill: require("./support_fill.png"),
-    //Header assets
-  menu: require('../icons/menu.png'),
-  dropDown: require('../icons/dropDown.png'),
-  badge: require('../icons/badge.png'),
-    //Homescreen
-  search: require('../icons/search.png'),
-  location: require('./location.png'),
-  star: require('./star.png'),
+  //Header assets
+  menu: require("./menu.png"),
+  dropDown: require("./dropDown.png"),
+  badge: require("./badge.png"),
+  //Homescreen
+  search: require("./search.png"),
+  searchHome: require("./searchHome.png"),
+  location: require("./location.png"),
+  star: require("./star.png"),
   timer: require("./timer.png"),
   like: require("./like.png"),
   modal: require("./modal.png"),
-  map: require('./map.png'),
-  kart: require('./kart.png'),
+  map: require("./map.png"),
+  kart: require("./kart.png"),
   share: require("./share.png"),
-
-}
+  back: require("./back.png"),
+};
