@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function LoginScreen() {
   return (
-    <View>
+    <View style={{flex:1,backgroundColor:'red'}}>
       <Text>LoginScreen</Text>
     </View>
   )

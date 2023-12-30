@@ -8,7 +8,7 @@ export default function Location_label(props: any) {
   const { row } = props;
   return (
     <View>
-      <View style={styles.con}>
+      <View style={row ? styles.con1 : styles.con}>
         <View style={styles.sub_con}>
           <Icon icon={icons.location} height={13} width={13} />
 
@@ -16,13 +16,23 @@ export default function Location_label(props: any) {
           {row && <Text style={styles.distance_row}>{"2 km"}</Text>}
         </View>
         {!row && <Text style={styles.distance}>{"2 km"}</Text>}
+          {row&&<View style={{ flexDirection: "row",alignItems:'center' }}>
+          <Icon icon={icons.map} height={15} width={15} />
+          <Text style={{fontSize:fontSize.Small,color:'#FF8C00'}}>{"Locate us map"}</Text>
+        </View>}
+        
       </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  con: { alignItems: "flex-end" },
+  con: { alignItems: "flex-end", },
+  con1: {
+    alignItems: "flex-start",
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
   sub_con: {
     flexDirection: "row",
     alignItems: "center",
