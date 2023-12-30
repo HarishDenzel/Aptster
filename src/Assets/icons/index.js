@@ -18,6 +18,10 @@ export const icons = {
   location: require('./location.png'),
   star: require('./star.png'),
   timer: require("./timer.png"),
-  like: require("./like.png")
+  like: require("./like.png"),
+  modal: require("./modal.png"),
+  map: require('./map.png'),
+  kart: require('./kart.png'),
+  share: require("./share.png"),
 
 }
