@@ -10,14 +10,17 @@ export const icons = {
   support: require("./support.png"),
   support_fill: require("./support_fill.png"),
     //Header assets
-  menu: require('../icons/menu.png'),
-  dropDown: require('../icons/dropDown.png'),
-  badge: require('../icons/badge.png'),
+  menu: require('./menu.png'),
+  dropDown: require('./dropDown.png'),
+  badge: require('./badge.png'),
     //Homescreen
-  search: require('../icons/search.png'),
+  search: require('./search.png'),
+  searchHome: require('./searchHome.png'),
   location: require('./location.png'),
   star: require('./star.png'),
   timer: require("./timer.png"),
-  like: require("./like.png")
+  like: require("./like.png"),
+  back: require("./back.png")
+
 
 }
