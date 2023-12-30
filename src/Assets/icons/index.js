@@ -14,7 +14,10 @@ export const icons = {
   dropDown: require('../icons/dropDown.png'),
   badge: require('../icons/badge.png'),
     //Homescreen
-  search: require('../icons/search.png')
-
+  search: require('../icons/search.png'),
+  location: require('./location.png'),
+  star: require('./star.png'),
+  timer: require("./timer.png"),
+  like: require("./like.png")
 
 }

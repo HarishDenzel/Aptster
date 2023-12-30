@@ -4,9 +4,11 @@ import Header from '../../components/Header'
 import { fontSize, height, width } from '../../Assets/Constant/fontsAndColors'
 import SearchBar from '../../components/SearchBar'
 import { SliderBox } from "react-native-image-slider-box";
+import { useTheme } from '@react-navigation/native'
 
 
 export default function HomeScreen(props: any) {
+  const{theme} = useTheme()
   const [searchValue, setSearchValue] = useState('')
   const [bannerList, setbannerList] = useState(['https://aptster-images.s3.us-east-2.amazonaws.com/restaurant.png', 'https://aptster-images.s3.us-east-2.amazonaws.com/restaurant.png'])
   const [allCatergoriesList, setallCatergoriesList] = useState([

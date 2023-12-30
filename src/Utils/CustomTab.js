@@ -35,7 +35,7 @@ export const CustomTab = () => {
       name: "Search",
       component: SearchScreen,
       icon: icons.search,
-      fill_icon: icons.search_fill_fill,
+      fill_icon: icons.search_fill,
     },
     {
       id: 4,
@@ -52,12 +52,7 @@ export const CustomTab = () => {
       fill_icon: icons.support_fill,
     },
   ];
-  {
-    Object.keys(bottom_data).map((e,i)=>{
-      console.log("e==>",e)
 
-    })
-  }
   return (
     <Tab.Navigator
       screenOptions={{
@@ -76,131 +71,32 @@ export const CustomTab = () => {
       }}
       initialRouteName="Home"
     >
-   
-{/* return(
-  <Tab.Screen
-        name="Home"
-        component={HomeScreen}
-        options={{
-          tabBarLabelStyle: { fontFamily: "Poppins-SemiBold" },
-          headerShown: false,
-          tabBarIcon: ({ color, size, focused }) => (
-            <View style={{ justifyContent: "center", alignItems: "center" }}>
-              <Image
-                source={focused ? icons.home_fill : icons.home}
-                style={{
-                  height: 20,
-                  width: 20,
-                  tintColor: focused ? colors.primary : "#c7c6c5",
-                }}
-              />
-            </View>
-          ),
-        }}
-      />
-) */}
-      
-      <Tab.Screen
-        name="Home"
-        component={HomeScreen}
-        options={{
-          tabBarLabelStyle: { fontFamily: "Poppins-SemiBold" },
-          headerShown: false,
-          tabBarIcon: ({ color, size, focused }) => (
-            <View style={{ justifyContent: "center", alignItems: "center" }}>
-              <Image
-                source={focused ? icons.home_fill : icons.home}
-                style={{
-                  height: 20,
-                  width: 20,
-                  tintColor: focused ? colors.primary : "#c7c6c5",
-                }}
-              />
-            </View>
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Deals"
-        component={DealsScreen}
-        options={{
-          tabBarLabelStyle: { fontFamily: "Poppins-SemiBold" },
-          headerShown: false,
-          tabBarIcon: ({ color, size, focused }) => (
-            <View style={{ justifyContent: "center", alignItems: "center" }}>
-              <Image
-                source={focused ? icons.deal_fill : icons.deal}
-                style={{
-                  height: 20,
-                  width: 20,
-                  tintColor: focused ? colors.primary : "#c7c6c5",
-                }}
-              />
-            </View>
-          ),
-        }}
-      />
-
-      <Tab.Screen
-        name="Search"
-        component={SearchScreen}
-        options={{
-          headerShown: false,
-          tabBarLabelStyle: { fontFamily: "Poppins-SemiBold" },
-          tabBarIcon: ({ color, size, focused }) => (
-            <View style={{ justifyContent: "center", alignItems: "center" }}>
-              <Image
-                source={focused ? icons.search : icons.search_fill}
-                style={{
-                  height: 20,
-                  width: 20,
-                  tintColor: focused ? colors.primary : "#c7c6c5",
-                }}
-              />
-            </View>
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="My Items"
-        component={MyItemScreen}
-        options={{
-          headerShown: false,
-
-          tabBarIcon: ({ color, size, focused }) => (
-            <View>
-              <Image
-                source={focused ? icons.heart_fill : icons.heart}
-                style={{
-                  height: 20,
-                  width: 20,
-                  tintColor: focused ? colors.primary : "#c7c6c5",
-                }}
-              />
-            </View>
-          ),
-        }}
-      />
-      <Tab.Screen
-        name="Support"
-        component={SupportScreen}
-        options={{
-          headerShown: false,
-
-          tabBarIcon: ({ color, size, focused }) => (
-            <View>
-              <Image
-                source={focused ? icons.support_fill : icons.support}
-                style={{
-                  height: 20,
-                  width: 20,
-                  tintColor: focused ? colors.primary : "#c7c6c5",
-                }}
-              />
-            </View>
-          ),
-        }}
-      />
+      {Object.values(bottom_data).map((e, i) => {
+        return (
+          <Tab.Screen
+            name={e.name}
+            component={e.component}
+            options={{
+              tabBarLabelStyle: { fontFamily: "Poppins-SemiBold" },
+              headerShown: false,
+              tabBarIcon: ({ color, size, focused }) => (
+                <View
+                  style={{ justifyContent: "center", alignItems: "center" }}
+                >
+                  <Image
+                    source={focused ? e.fill_icon : e.icon}
+                    style={{
+                      height: 20,
+                      width: 20,
+                      tintColor: focused ? colors.primary : "#c7c6c5",
+                    }}
+                  />
+                </View>
+              ),
+            }}
+          />
+        );
+      })}
     </Tab.Navigator>
   );
 };
