@@ -19,10 +19,9 @@ export default function SearchScreen() {
     <>
       <View style={styles.con}>
         <Header />
-        <SearchBar 
-        placeholder={"Search for “House keeping” deals"}
-         />
-
+        <SearchBar
+          placeholder={"Search for “House keeping” deals"}
+        />
         <FlatList
           data={prodect}
           renderItem={({ item }) => {

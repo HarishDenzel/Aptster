@@ -1,7 +1,6 @@
 import { FlatList, Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import Header from '../../components/Header'
-import { fontSize, height, width } from '../../assets/Constant/fontsAndColors'
 import SearchBar from '../../components/SearchBar'
 import { SliderBox } from "react-native-image-slider-box";
 import { useTheme } from '@react-navigation/native'
@@ -97,7 +96,7 @@ export default function HomeScreen(props: any) {
             imageLoadingColor="#2196F3"
           />
           <View style={styles.catContainer}>
-            <TouchableOpacity onPress={()=>props.navigation.navigate('AllCatergories')}  style={styles.catHeader}>
+            <TouchableOpacity onPress={() => props.navigation.navigate('AllCatergories')} style={styles.catHeader}>
               <Text style={styles.catHeadText}>All Catergories</Text>
               <Text style={styles.catSubText}>View all</Text>
             </TouchableOpacity>

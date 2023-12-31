@@ -10,8 +10,8 @@ import {
   width,
 } from "../assets/Constant/fontsAndColors";
 import { SliderBox } from "react-native-image-slider-box";
-import Location_label from "./Location_label";
-import Price_card from "./Price_card";
+import Location_label from "./LocationLabel";
+import Price_card from "./PriceCard";
 import Button from "./Button";
 import DualButton from "./DualButton";
 export default function ProdectModal(props: any) {

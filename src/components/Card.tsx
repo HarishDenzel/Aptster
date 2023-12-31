@@ -17,8 +17,8 @@ import {
 
 import { icons } from "../assets/icons";
 import Icon from "./Icon";
-import Price_card from "./Price_card";
-import Location_label from "./Location_label";
+import Price_card from "./PriceCard";
+import Location_label from "./LocationLabel";
 import { useTheme } from "@react-navigation/native";
 
 export default function Card(props: any) {
