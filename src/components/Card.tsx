@@ -1,4 +1,12 @@
-import { StyleSheet, Text, View, Image, Touchable, Pressable, TouchableOpacity } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  Touchable,
+  Pressable,
+  TouchableOpacity,
+} from "react-native";
 import React from "react";
 import {
   width,
@@ -41,7 +49,6 @@ export default function Card(props: any) {
           </View>
         </View>
 
-
         <View style={styles.footer}>
           <Price_card />
           <View style={styles.sold_con}>
@@ -55,8 +62,6 @@ export default function Card(props: any) {
             </View>
           </View>
         </View>
-
-
       </View>
       <View style={styles.space} />
     </TouchableOpacity>
@@ -92,7 +97,6 @@ const makeStyles = (colors: any) =>
       width: "100%",
       resizeMode: "cover",
     },
-
     ends_con: {
       height: (height / 100) * 2.5,
       width: (width / 100) * 25,

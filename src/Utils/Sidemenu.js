@@ -15,8 +15,8 @@ import { Icon } from "../Components/Icon";
 import { StackActions, useIsFocused } from "@react-navigation/native";
 import { useDispatch, useSelector } from "react-redux";
 
-import { List, Chip, Divider } from "react-native-paper";
-const primaryColor = "#3a3a3a";
+
+
 
 
 

@@ -223,13 +223,7 @@ export default class Functions {
       // Error retrieving data
     }
   };
-  _storeData = async (id) => {
-    try {
-      await AsyncStorage.setItem(global.const.checkValidUser, id.toString());
-    } catch (error) {
-      // Error saving data
-    }
-  };
+  
   isValidUser = () => {
     return new Promise(async (resolve, reject) => {
       try {
