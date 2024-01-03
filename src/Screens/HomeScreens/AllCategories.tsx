@@ -2,7 +2,7 @@
 import React, { Component, useState } from 'react';
 import { View, Text, StyleSheet, FlatList, TouchableOpacity, Image } from 'react-native';
 import Header from '../../components/Header';
-import SearchBar from '../../components/SearchBar';
+import SearchBar from '../../components/common/SearchBar';
 import { allCatergoriesList } from '../../utils/enum/mock';
 import { string } from '../../utils/global/constants';
 

@@ -17,5 +17,5 @@ export default function Modals(props: any) {
 }
 
 const styles = StyleSheet.create({
-  con: { flex: 1, backgroundColor: "rgba(55, 55, 55, 0.3)" },
+  con: { flex: 1, backgroundColor: "rgba(55, 55, 55, 0.2)" },
 });

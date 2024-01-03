@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, TouchableOpacity,ScrollView } from "react-native";
 import React, { useState } from "react";
-import Modals from "./Modal";
-import Icon from "./Icon";
+import Modals from "./common/Modal";
+import Icon from "./common/Icon";
 import { icons } from "../assets/icons";
 import {
   View_Spacing,
@@ -12,8 +12,8 @@ import {
 import { SliderBox } from "react-native-image-slider-box";
 import Location_label from "./LocationLabel";
 import Price_card from "./PriceCard";
-import Button from "./Button";
-import DualButton from "./DualButton";
+import Button from "./common/Button";
+import DualButton from "./common/DualButton";
 export default function ProdectModal(props: any) {
   const { show, onDismiss,bannerList } = props;
 
@@ -24,8 +24,8 @@ export default function ProdectModal(props: any) {
       <View style={{ alignSelf: "center", flex: 0.05 }}>
           <Icon 
           icon={icons.modal}
-           height={15}
-            width={15}
+           height={20}
+            width={20}
              />
         </View>
         <View style={styles.header_con}>
@@ -100,9 +100,9 @@ export default function ProdectModal(props: any) {
 }
 
 const styles = StyleSheet.create({
-  second_con: { flex: 0.4 },
+  second_con: { flex: 0.2, backgroundColor: "rgba(55, 55, 55, 0.2)" },
   con: {
-    flex: 0.6,
+    flex: 0.8,
     backgroundColor: "#fff",
     borderTopLeftRadius: 15,
     borderTopRightRadius: 15,

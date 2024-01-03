@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { icons } from "../assets/icons";
 import { fontSize } from "../assets/Constant/fontsAndColors";
-import Icon from "./Icon";
+import Icon from "./common/Icon";
 import { string } from "../utils/global/constants";
 
 export default function Location_label(props: any) {

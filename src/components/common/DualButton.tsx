@@ -1,21 +1,21 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 import React from "react";
-import { height, width } from "../assets/Constant/fontsAndColors";
-import { string } from "../utils/global/constants";
+import { height, width } from "../../assets/Constant/fontsAndColors";
+import { string } from "../../utils/global/constants";
 
 export default function DualButton() {
   return (
     <>
       <View>
         <View style={styles.con}>
-          <View style={[styles.btn_con, { backgroundColor: "#0073FF" }]}>
+          <Pressable style={[styles.btn_con, { backgroundColor: "#0073FF" }]}>
             <Text style={styles.label_white}>{string.add}</Text>
-          </View>
-          <View
+          </Pressable>
+          <Pressable
             style={[styles.btn_con, { borderWidth: 1, borderColor: "#0073FF" }]}
           >
             <Text style={styles.lable_blue}>{string.send}</Text>
-          </View>
+          </Pressable>
         </View>
       </View>
     </>

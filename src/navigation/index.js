@@ -10,9 +10,9 @@ import { enableScreens } from 'react-native-screens';
 import { CustomTab } from '../utils/CustomTab';
 import { AppTheme } from '../utils/Apptheme';
 //import SideMenu from '../Utils/Sidemenu';
-import HomeScreen from '../screens/HomeScreens/HomeScreen';
-import LoginScreen from '../screens/AuthScreens/LoginScreen';
 import AllCatergories from '../screens/HomeScreens/AllCategories';
+import LoginScreen from '../screens/AuthScreens/LoginScreen';
+import HomeScreen from '../screens/HomeScreens/HomeScreen';
 
 const Stack = createStackNavigator();
 

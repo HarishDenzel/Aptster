@@ -1,7 +1,7 @@
 import { FlatList, Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useState } from 'react'
 import Header from '../../components/Header'
-import SearchBar from '../../components/SearchBar'
+import SearchBar from '../../components/common/SearchBar'
 import { SliderBox } from "react-native-image-slider-box";
 import { useTheme } from '@react-navigation/native'
 import { allCatergoriesList,bannerList} from '../../utils/enum/mock';

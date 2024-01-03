@@ -16,7 +16,7 @@ import {
 } from "../assets/Constant/fontsAndColors";
 
 import { icons } from "../assets/icons";
-import Icon from "./Icon";
+import Icon from "./common/Icon";
 import Price_card from "./PriceCard";
 import Location_label from "./LocationLabel";
 import { useTheme } from "@react-navigation/native";

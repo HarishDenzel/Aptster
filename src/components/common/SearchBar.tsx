@@ -1,8 +1,8 @@
 //import liraries
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TextInput, TextInputProps, Image } from 'react-native';
-import { fontSize } from '../assets/Constant/fontsAndColors';
-import { icons } from '../assets/icons';
+import { fontSize } from '../../assets/Constant/fontsAndColors';
+import { icons } from '../../assets/icons';
 
 // create a component
 const SearchBar = (props: React.JSX.IntrinsicAttributes & React.JSX.IntrinsicClassAttributes<TextInput> & Readonly<TextInputProps>) => {

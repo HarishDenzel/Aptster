@@ -1,13 +1,14 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text } from "react-native";
 import React from "react";
-import { height, width } from "../assets/Constant/fontsAndColors";
-import { string } from "../utils/global/constants";
+import { height, width } from "../../assets/Constant/fontsAndColors";
+import { string } from "../../utils/global/constants";
 
-export default function Button() {
+export default function Button(props:any) {
+  const{onPress}=props
   return (
-    <View style={styles.btn}>
+    <Pressable onPress={onPress} style={styles.btn}>
       <Text style={styles.label}>{string.buyNow}</Text>
-    </View>
+    </Pressable>
   );
 }
 

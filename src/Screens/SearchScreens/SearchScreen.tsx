@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import Header from "../../components/Header";
 import Card from "../../components/Card";
 import { useTheme } from "@react-navigation/native";
-import SearchBar from "../../components/SearchBar";
+import SearchBar from "../../components/common/SearchBar";
 import { bannerList, prodect } from "../../utils/enum/mock";
-import ProdectModal from "../../components/ProdectModal";
+import ProdectModal from "../../components/ProductModal";
 import { string } from "../../utils/global/constants";
 
 export default function SearchScreen() {
