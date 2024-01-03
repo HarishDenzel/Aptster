@@ -9,14 +9,35 @@ import { string } from '../../utils/global/constants';
 // create a component
 const AllCatergories = (props: any) => {
     const [searchValue, setSearchValue] = useState('')
+    const [selectedItem, setselectedItem] = useState(props.route.params.name?props.route.params.name:'Automotive')
 
     const renderItems = (item: { url: any; name: any; }) => {
         return (
             <TouchableOpacity
-                onPress={() => { null }}
+            onPress={() => { setselectedItem(item.name) }}
+            style={{
+                    padding: 10,
+                    alignItems: 'center',
+                    backgroundColor: selectedItem ==  item.name ? '#F9FAFB' : null,
+                    borderLeftWidth:selectedItem ==  item.name ? 3 : 0,
+                    borderLeftColor:selectedItem ==  item.name ? 'orange' : null
+                }}>
+                <Image
+                    style={styles.catImage}
+                    resizeMode='contain'
+                    source={{ uri: item.url }}
+                />
+                <Text style={{ fontSize: 12, color: '#1E1E1E', fontWeight: '400', textAlign: 'center', paddingVertical: 5 }}>{item.name}</Text>
+            </TouchableOpacity>
+        );
+    }
+    const renderSubItems = (item: { url: any; name: any; }) => {
+        return (
+            <TouchableOpacity
+                onPress={() => { setselectedItem(item.name) }}
                 style={{
                     padding: 10,
-                    alignItems: 'center'
+                    alignItems: 'center',
                 }}>
                 <Image
                     style={styles.catImage}
@@ -47,14 +68,14 @@ const AllCatergories = (props: any) => {
                     />
                 </View>
                 <View style={{ flex: 0.7, padding: 10, }}>
-                    <Text style={styles.catHeadText}>Automotive</Text>
+                    <Text style={styles.catHeadText}>{selectedItem}</Text>
                     <FlatList
                         contentContainerStyle={{ alignSelf: 'flex-start' }}
                         showsVerticalScrollIndicator={false}
                         showsHorizontalScrollIndicator={false}
                         numColumns={3}
                         data={allCatergoriesList}
-                        renderItem={({ item }) => renderItems(item)}
+                        renderItem={({ item }) => renderSubItems(item)}
                     />
                 </View>
             </View>

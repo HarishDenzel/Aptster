@@ -17,7 +17,7 @@
  //HomeScreen
  export const string = {
     hello : "Hello",
-    notes : "What you are looking for{'\n'}today?",
+    notes : "What you are looking for\ntoday?",
     searchPlaceholder: "Search for “House keeping” deals",
     allCatergories:"All Catergories",
     viewAll : "View all",

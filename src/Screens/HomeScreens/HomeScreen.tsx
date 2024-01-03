@@ -15,7 +15,7 @@ export default function HomeScreen(props: any) {
   const renderItems = (item: { url: any; name: any; }) => {
     return (
       <TouchableOpacity
-        onPress={() => { null }}
+        onPress={() => props.navigation.navigate('AllCatergories',{name:item.name})}
         style={{
           padding: 10
         }}>
