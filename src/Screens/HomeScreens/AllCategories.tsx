@@ -3,48 +3,13 @@ import React, { Component, useState } from 'react';
 import { View, Text, StyleSheet, FlatList, TouchableOpacity, Image } from 'react-native';
 import Header from '../../components/Header';
 import SearchBar from '../../components/SearchBar';
+import { allCatergoriesList } from '../../utils/enum/mock';
+import { string } from '../../utils/global/constants';
 
 // create a component
 const AllCatergories = (props: any) => {
     const [searchValue, setSearchValue] = useState('')
-    const [allCatergoriesList, setallCatergoriesList] = useState([
-        {
-            name: 'Automotive',
-            url: 'https://aptster-images.s3.us-east-2.amazonaws.com/18.png'
-        },
-        {
-            name: 'Merchants',
-            url: 'https://aptster-images.s3.us-east-2.amazonaws.com/11.png'
-        }, {
-            name: 'Real Estate',
-            url: 'https://aptster-images.s3.us-east-2.amazonaws.com/12.png'
-        }, {
-            name: 'Constructions',
-            url: 'https://aptster-images.s3.us-east-2.amazonaws.com/13.png'
-        }, {
-            name: 'Educations',
-            url: 'https://aptster-images.s3.us-east-2.amazonaws.com/14.png'
-        }, {
-            name: 'Entertainment',
-            url: 'https://aptster-images.s3.us-east-2.amazonaws.com/15.png'
-        }, {
-            name: 'Travel',
-            url: 'https://aptster-images.s3.us-east-2.amazonaws.com/17.png'
-        }, {
-            name: 'Health',
-            url: 'https://aptster-images.s3.us-east-2.amazonaws.com/9.png'
-        }, {
-            name: 'Home',
-            url: 'https://aptster-images.s3.us-east-2.amazonaws.com/8.png'
-        }, {
-            name: 'sale',
-            url: 'https://aptster-images.s3.us-east-2.amazonaws.com/9.png'
-        }, {
-            name: 'Automotive',
-            url: 'https://aptster-images.s3.us-east-2.amazonaws.com/6.png'
-        },
 
-    ])
     const renderItems = (item: { url: any; name: any; }) => {
         return (
             <TouchableOpacity
@@ -70,7 +35,7 @@ const AllCatergories = (props: any) => {
     return (
         <View style={styles.container}>
             <Header {...props} isBack={true} />
-            <SearchBar {...props} placeholder={'Search for “House keeping” deals'} value={searchValue} onChangeText={(e) => { setSearchValue(e) }} />
+            <SearchBar {...props} placeholder={string.searchPlaceholder} value={searchValue} onChangeText={(e) => { setSearchValue(e) }} />
             <View style={{ flex: 1, flexDirection: 'row', backgroundColor: '#ffff', marginHorizontal: 10 }}>
                 <View style={{ flex: 0.3, alignItems: 'center', borderRightWidth: 0.5, borderRightColor: '#D1D5DB' }}>
                     <FlatList
@@ -79,7 +44,6 @@ const AllCatergories = (props: any) => {
                         data={allCatergoriesList}
                         renderItem={({ item }) => renderItems(item)}
                         ItemSeparatorComponent={() => renderSeparator()}
-
                     />
                 </View>
                 <View style={{ flex: 0.7, padding: 10, }}>

@@ -3,6 +3,7 @@ import React from "react";
 import { icons } from "../assets/icons";
 import { fontSize, height, width } from "../assets/Constant/fontsAndColors";
 import { useTheme } from "@react-navigation/native";
+import { string } from "../utils/global/constants";
 
 export default function Price_card() {
   const { colors } = useTheme();
@@ -39,10 +40,10 @@ export default function Price_card() {
         </View>
 
         <Text style={{ fontSize: fontSize.verySmall_50, color: colors.gray }}>
-          {"4.6K ratings"}
+          {"4.6K "+string.ratings}
         </Text>
       </View>
-      <Text style={{ fontSize: 8, color: colors.gray }}>{"200 bought"}</Text>
+      <Text style={{ fontSize: 8, color: colors.grey }}>{"200 "+string.bought}</Text>
     </View>
   );
 }

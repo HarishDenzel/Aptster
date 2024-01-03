@@ -4,51 +4,14 @@ import Header from '../../components/Header'
 import SearchBar from '../../components/SearchBar'
 import { SliderBox } from "react-native-image-slider-box";
 import { useTheme } from '@react-navigation/native'
+import { allCatergoriesList,bannerList} from '../../utils/enum/mock';
+import {string} from '../../utils/global/constants';
 
 
 export default function HomeScreen(props: any) {
   const { colors } = useTheme()
   const styles = makeStyles(colors)
   const [searchValue, setSearchValue] = useState('')
-  const [bannerList, setbannerList] = useState(['https://aptster-images.s3.us-east-2.amazonaws.com/restaurant.png', 'https://aptster-images.s3.us-east-2.amazonaws.com/restaurant.png'])
-  const [allCatergoriesList, setallCatergoriesList] = useState([
-    {
-      name: 'Automotive',
-      url: 'https://aptster-images.s3.us-east-2.amazonaws.com/18.png'
-    },
-    {
-      name: 'Merchants',
-      url: 'https://aptster-images.s3.us-east-2.amazonaws.com/11.png'
-    }, {
-      name: 'Real Estate',
-      url: 'https://aptster-images.s3.us-east-2.amazonaws.com/12.png'
-    }, {
-      name: 'Constructions',
-      url: 'https://aptster-images.s3.us-east-2.amazonaws.com/13.png'
-    }, {
-      name: 'Educations',
-      url: 'https://aptster-images.s3.us-east-2.amazonaws.com/14.png'
-    }, {
-      name: 'Entertainment',
-      url: 'https://aptster-images.s3.us-east-2.amazonaws.com/15.png'
-    }, {
-      name: 'Travel',
-      url: 'https://aptster-images.s3.us-east-2.amazonaws.com/17.png'
-    }, {
-      name: 'Health',
-      url: 'https://aptster-images.s3.us-east-2.amazonaws.com/9.png'
-    }, {
-      name: 'Home',
-      url: 'https://aptster-images.s3.us-east-2.amazonaws.com/8.png'
-    }, {
-      name: 'sale',
-      url: 'https://aptster-images.s3.us-east-2.amazonaws.com/9.png'
-    }, {
-      name: 'Automotive',
-      url: 'https://aptster-images.s3.us-east-2.amazonaws.com/6.png'
-    },
-
-  ])
   const renderItems = (item: { url: any; name: any; }) => {
     return (
       <TouchableOpacity
@@ -73,12 +36,12 @@ export default function HomeScreen(props: any) {
           contentContainerStyle={{ paddingBottom: 60 }}>
           <View style={styles.welcomeCon}>
             <View style={styles.welcomesub}>
-              <Text style={styles.headText}>Hello</Text>
+              <Text style={styles.headText}>{string.hello}</Text>
               <Text style={styles.subText}>Harish !</Text>
             </View>
-            <Text style={styles.notesText}>What you are looking for{'\n'}today?</Text>
+            <Text style={styles.notesText}>{string.notes}</Text>
           </View>
-          <SearchBar {...props} placeholder={'Search for “House keeping” deals'} value={searchValue} onChangeText={(e) => { setSearchValue(e) }} />
+          <SearchBar {...props} placeholder={string.searchPlaceholder} value={searchValue} onChangeText={(e) => { setSearchValue(e) }} />
           <SliderBox
             images={bannerList}
             sliderBoxHeight={200}
@@ -97,8 +60,8 @@ export default function HomeScreen(props: any) {
           />
           <View style={styles.catContainer}>
             <TouchableOpacity onPress={() => props.navigation.navigate('AllCatergories')} style={styles.catHeader}>
-              <Text style={styles.catHeadText}>All Catergories</Text>
-              <Text style={styles.catSubText}>View all</Text>
+              <Text style={styles.catHeadText}>{string.allCatergories}</Text>
+              <Text style={styles.catSubText}>{string.viewAll}</Text>
             </TouchableOpacity>
             <ScrollView
               horizontal

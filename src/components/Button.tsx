@@ -1,11 +1,12 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { height, width } from "../assets/Constant/fontsAndColors";
+import { string } from "../utils/global/constants";
 
 export default function Button() {
   return (
     <View style={styles.btn}>
-      <Text style={styles.label}>{"Buy Now"}</Text>
+      <Text style={styles.label}>{string.buyNow}</Text>
     </View>
   );
 }

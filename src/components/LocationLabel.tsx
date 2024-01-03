@@ -3,6 +3,7 @@ import React from "react";
 import { icons } from "../assets/icons";
 import { fontSize } from "../assets/Constant/fontsAndColors";
 import Icon from "./Icon";
+import { string } from "../utils/global/constants";
 
 export default function Location_label(props: any) {
   const { row } = props;
@@ -20,7 +21,7 @@ export default function Location_label(props: any) {
           <View style={{ flexDirection: "row", alignItems: "center" }}>
             <Icon icon={icons.map} height={15} width={15} />
             <Text style={{ fontSize: fontSize.Small, color: "#FF8C00" }}>
-              {"Locate us map"}
+              {string.locate}
             </Text>
           </View>
         )}

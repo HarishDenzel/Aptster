@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { height, width } from "../assets/Constant/fontsAndColors";
+import { string } from "../utils/global/constants";
 
 export default function DualButton() {
   return (
@@ -8,12 +9,12 @@ export default function DualButton() {
       <View>
         <View style={styles.con}>
           <View style={[styles.btn_con, { backgroundColor: "#0073FF" }]}>
-            <Text style={styles.label_white}>{"Add to Cart"}</Text>
+            <Text style={styles.label_white}>{string.add}</Text>
           </View>
           <View
             style={[styles.btn_con, { borderWidth: 1, borderColor: "#0073FF" }]}
           >
-            <Text style={styles.lable_blue}>{"Send a Gift"}</Text>
+            <Text style={styles.lable_blue}>{string.send}</Text>
           </View>
         </View>
       </View>
@@ -32,7 +33,6 @@ const styles = StyleSheet.create({
   btn_con: {
     height: (height / 100) * 5,
     width: (width / 100) * 45,
-
     alignItems: "center",
     justifyContent: "center",
   },

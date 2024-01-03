@@ -20,6 +20,7 @@ import Icon from "./Icon";
 import Price_card from "./PriceCard";
 import Location_label from "./LocationLabel";
 import { useTheme } from "@react-navigation/native";
+import { string } from "../utils/global/constants";
 
 export default function Card(props: any) {
   const { title, img, onPress } = props;
@@ -41,7 +42,7 @@ export default function Card(props: any) {
             style={{ position: "absolute", paddingTop: 10, paddingLeft: 10 }}
           >
             <View style={styles.sponsord_con}>
-              <Text style={styles.sponsored_label}>{"Sponsored"}</Text>
+              <Text style={styles.sponsored_label}>{string.sponsored}</Text>
             </View>
           </View>
           <View style={styles.like_con}>
@@ -52,12 +53,12 @@ export default function Card(props: any) {
         <View style={styles.footer}>
           <Price_card />
           <View style={styles.sold_con}>
-            <Text style={styles.sold_text}>{"Sold: 140"}</Text>
+            <Text style={styles.sold_text}>{string.sold+" 140"}</Text>
 
             <View style={{ flexDirection: "row", alignItems: "center" }}>
               <View style={styles.ends_con}>
                 <Image source={icons.timer} style={styles.timer} />
-                <Text style={styles.timer_text}>{"End in 10:39"}</Text>
+                <Text style={styles.timer_text}>{string.endIn+" 10:39"}</Text>
               </View>
             </View>
           </View>

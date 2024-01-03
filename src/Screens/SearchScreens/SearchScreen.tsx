@@ -4,15 +4,12 @@ import Header from "../../components/Header";
 import Card from "../../components/Card";
 import { useTheme } from "@react-navigation/native";
 import SearchBar from "../../components/SearchBar";
-import { prodect } from "../../utils/enum/mock";
+import { bannerList, prodect } from "../../utils/enum/mock";
 import ProdectModal from "../../components/ProdectModal";
+import { string } from "../../utils/global/constants";
 
 export default function SearchScreen() {
   const { colors } = useTheme();
-  const [bannerList, setbannerList] = useState([
-    "https://aptster-images.s3.us-east-2.amazonaws.com/restaurant.png",
-    "https://aptster-images.s3.us-east-2.amazonaws.com/restaurant.png",
-  ]);
   const [show, setShow] = useState(false);
 
   return (
@@ -20,7 +17,7 @@ export default function SearchScreen() {
       <View style={styles.con}>
         <Header />
         <SearchBar
-          placeholder={"Search for “House keeping” deals"}
+          placeholder={string.searchPlaceholder}
         />
         <FlatList
           data={prodect}
