@@ -6,6 +6,7 @@ import {
   Touchable,
   Pressable,
   TouchableOpacity,
+  Alert,
 } from "react-native";
 import React from "react";
 import {
@@ -14,21 +15,24 @@ import {
   fontSize,
   View_Spacing,
 } from "../assets/Constant/fontsAndColors";
-
+import { SliderBox } from "react-native-image-slider-box";
 import { icons } from "../assets/icons";
 import Icon from "./common/Icon";
 import Price_card from "./PriceCard";
 import Location_label from "./LocationLabel";
 import { useTheme } from "@react-navigation/native";
 import { string } from "../utils/global/constants";
-
+import { bannerList } from "../utils/enum/mock";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import Vector from "../assets/Vector";
 export default function Card(props: any) {
-  const { title, img, onPress } = props;
+  const { title, img, onPress, isLike, likePress } = props;
   const { colors } = useTheme();
 
   const styles = makeStyles(colors);
   return (
     <TouchableOpacity onPress={onPress}>
+    
       <View style={styles.space} />
       <View style={styles.card_con}>
         <View style={styles.header_con}>
@@ -37,28 +41,46 @@ export default function Card(props: any) {
         </View>
 
         <View style={styles.img_con}>
-          <Image source={img} style={styles.img} />
-          <View
-            style={{ position: "absolute", paddingTop: 10, paddingLeft: 10 }}
-          >
+          <SliderBox
+            images={bannerList}
+            sliderBoxHeight={200}
+            onCurrentImagePressed={(index: any) =>
+              console.warn(`image ${index} pressed`)
+            }
+            dotColor="#FF8C00"
+            inactiveDotColor="#90A4AE"
+            //paginationBoxVerticalPadding={20}
+            autoplay
+            circleLoop
+            resizeMethod={"resize"}
+            resizeMode={"cover"}
+            dotStyle={styles.dotstyle}
+            ImageComponentStyle={styles.slideImage}
+            imageLoadingColor="#2196F3"
+          />
+          <View style={styles.sponsored}>
             <View style={styles.sponsord_con}>
               <Text style={styles.sponsored_label}>{string.sponsored}</Text>
             </View>
           </View>
-          <View style={styles.like_con}>
-            <Icon height={35} width={35} icon={icons.like} />
-          </View>
+          <Pressable onPress={likePress} style={styles.like_con}>
+            <Vector.Ionicons
+              name={isLike ? "heart" : "heart-circle"}
+              color={"#dbdbdb"}
+              size={30}
+            />
+          </Pressable>
         </View>
 
         <View style={styles.footer}>
           <Price_card />
           <View style={styles.sold_con}>
-            <Text style={styles.sold_text}>{string.sold+" 140"}</Text>
+            <Text style={styles.sold_text}>{string.sold + " 140"}</Text>
 
             <View style={{ flexDirection: "row", alignItems: "center" }}>
               <View style={styles.ends_con}>
                 <Image source={icons.timer} style={styles.timer} />
-                <Text style={styles.timer_text}>{string.endIn+" 10:39"}</Text>
+                <Text style={styles.timer_text}>{string.endIn + " 10:39"}</Text>
               </View>
             </View>
           </View>
@@ -92,6 +114,7 @@ const makeStyles = (colors: any) =>
     },
     img_con: {
       flex: 0.5,
+      alignItems: "center",
     },
     img: {
       height: "100%",
@@ -149,5 +172,24 @@ const makeStyles = (colors: any) =>
       fontSize: fontSize.verySmall_50,
       fontWeight: "300",
       color: colors.gray,
+    },
+
+    dotstyle: {
+      width: 10,
+      height: 5,
+
+      marginHorizontal: 0,
+      padding: 0,
+      margin: 0,
+      backgroundColor: "rgba(128, 128, 128, 0.92)",
+    },
+    slideImage: {
+      width: "90%",
+    },
+    sponsored: {
+      position: "absolute",
+      paddingTop: 10,
+      paddingLeft: 10,
+      alignSelf: "flex-start",
     },
   });

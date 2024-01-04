@@ -5,7 +5,7 @@ import MyItemScreen from "../../screens/FavouriteScreens/MyItemScreen";
 import SupportScreen from "../../screens/SupportScreens/SupportScreen";
 import { icons } from "../../assets/icons";
 
-const prodect = [
+const product = [
   {
     id: 1,
     name: 'Cosmetic & Beauty Academy',
@@ -19,7 +19,8 @@ const prodect = [
     sold: '140',
     timeEnds: '10:29',
     offer: '10',
-    img: require("../../assets/images/salon.png")
+    img: require("../../assets/images/salon.png"),
+    isLike:false
   },
   {
     id: 2,
@@ -34,7 +35,8 @@ const prodect = [
     sold: '130',
     timeEnds: '10:29',
     offer: '10',
-    img: require("../../assets/images/salon.png")
+    img: require("../../assets/images/salon.png"),
+    isLike:false
   },
 ]
 const bottom_data = [
@@ -115,7 +117,7 @@ const allCatergoriesList = [
 const bannerList =
   ['https://aptster-images.s3.us-east-2.amazonaws.com/restaurant.png', 'https://aptster-images.s3.us-east-2.amazonaws.com/restaurant.png']
 export {
-  prodect,
+  product,
   bottom_data,
   allCatergoriesList,
   bannerList
