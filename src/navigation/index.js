@@ -13,6 +13,7 @@ import { AppTheme } from '../utils/Apptheme';
 import AllCatergories from '../screens/HomeScreens/AllCategories';
 import LoginScreen from '../screens/AuthScreens/LoginScreen';
 import HomeScreen from '../screens/HomeScreens/HomeScreen';
+import InitialScreen from '../screens/AuthScreens/InitialScreen';
 
 const Stack = createStackNavigator();
 
@@ -84,7 +85,7 @@ export default function App() {
     <NavigationContainer theme={AppTheme}>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
 
-        {/* <Stack.Screen name={'InitialScreen'} component={InitialScreen} /> */}
+        <Stack.Screen name={'InitialScreen'} component={InitialScreen} />
         <Stack.Screen name={'BottomTab'} component={BottomTab} />
         <Stack.Screen name={'AuthStack'} component={AuthStack} />
 

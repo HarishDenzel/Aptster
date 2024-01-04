@@ -21,7 +21,7 @@ export default function SearchScreen() {
   }, []);
 
   const searchData = (text: string) => {
-    const newData = prodect.filter((item) => {
+    const newData = product.filter((item) => {
       const itemData = item.name.toUpperCase();
       const textData = text.toUpperCase();
       return itemData.indexOf(textData) > -1;

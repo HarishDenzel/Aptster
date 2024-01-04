@@ -86,7 +86,7 @@ export default function Card(props: any) {
           </View>
         </View>
       </View>
-      <View style={styles.space} />
+      {/* <View style={styles.space} /> */}
     </TouchableOpacity>
   );
 }

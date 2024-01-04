@@ -14,7 +14,7 @@ import Location_label from "./LocationLabel";
 import Price_card from "./PriceCard";
 import Button from "./common/Button";
 import DualButton from "./common/DualButton";
-export default function ProdectModal(props: any) {
+export default function ProductModal(props: any) {
   const { show, onDismiss,bannerList } = props;
 
   return (

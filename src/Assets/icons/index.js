@@ -1,4 +1,6 @@
 export const icons = {
+  icLauncher: require("./ic_launcher.png"),
+
   home: require("./home.png"),
   home_fill: require("./home_fill.png"),
   search: require("./search.png"),
