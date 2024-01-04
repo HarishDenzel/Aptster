@@ -41,7 +41,7 @@ export default function HomeScreen(props: any) {
             </View>
             <Text style={styles.notesText}>{string.notes}</Text>
           </View>
-          <SearchBar {...props} placeholder={string.searchPlaceholder} value={searchValue} onChangeText={(e) => { setSearchValue(e) }} />
+          <SearchBar disable={true} {...props} placeholder={string.searchPlaceholder} value={searchValue} onChangeText={(e) => { setSearchValue(e) }} />
           <SliderBox
             images={bannerList}
             sliderBoxHeight={200}
