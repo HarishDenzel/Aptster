@@ -1,6 +1,6 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TextInput, TextInputProps, Image, Pressable ,Alert} from 'react-native';
+import { View, Text, StyleSheet, TextInput, TextInputProps, Image, Pressable ,TouchableOpacity} from 'react-native';
 import { fontSize } from '../../assets/Constant/fontsAndColors';
 import { icons } from '../../assets/icons';
 import { string } from '../../utils/global/constants';
@@ -9,10 +9,10 @@ import { string } from '../../utils/global/constants';
 const SearchBar = (props: React.JSX.IntrinsicAttributes & React.JSX.IntrinsicClassAttributes<TextInput> & Readonly<TextInputProps>) => {
     const { value, disable } = props;
     return (
-        <View style={styles.container}>
-           {disable? <Pressable  onPress={()=> props.navigation.navigate('Search')} style={styles.input}>
+        <TouchableOpacity disabled={!disable } onPress={()=>props.navigation.navigate('Search')} style={styles.container}>
+           {disable? <View   style={styles.input}>
             <Text style={{fontSize:fontSize.Medium,color:'#b8b8b8'}}>{string.searchPlaceholder}</Text>
-            </Pressable>:
+            </View>:
             <TextInput
            
                
@@ -22,7 +22,7 @@ const SearchBar = (props: React.JSX.IntrinsicAttributes & React.JSX.IntrinsicCla
             />
     }
             <Image source={icons.searchHome} style={styles.imageStyle} />
-        </View>
+        </TouchableOpacity>
     );
 };
 

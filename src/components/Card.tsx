@@ -44,9 +44,7 @@ export default function Card(props: any) {
           <SliderBox
             images={bannerList}
             sliderBoxHeight={200}
-            onCurrentImagePressed={(index: any) =>
-              console.warn(`image ${index} pressed`)
-            }
+            onCurrentImagePressed={onPress}
             dotColor="#FF8C00"
             inactiveDotColor="#90A4AE"
             //paginationBoxVerticalPadding={20}
