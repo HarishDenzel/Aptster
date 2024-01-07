@@ -14,19 +14,18 @@ import {
   height,
   fontSize,
   View_Spacing,
-} from "../assets/Constant/fontsAndColors";
+} from "../assets/constant/fontsAndColors";
 import { SliderBox } from "react-native-image-slider-box";
 import { icons } from "../assets/icons";
-import Icon from "./common/Icon";
 import Price_card from "./PriceCard";
 import Location_label from "./LocationLabel";
 import { useTheme } from "@react-navigation/native";
 import { string } from "../utils/global/constants";
 import { bannerList } from "../utils/enum/mock";
-import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+
 import Vector from "../assets/Vector";
 export default function Card(props: any) {
-  const { title, img, onPress, isLike, likePress } = props;
+  const { title, onPress, isLike, likePress } = props;
   const { colors } = useTheme();
 
   const styles = makeStyles(colors);

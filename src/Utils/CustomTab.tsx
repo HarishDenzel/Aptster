@@ -56,38 +56,5 @@ export const CustomTab = () => {
   );
 };
 const styles = StyleSheet.create({
-  circle: {
-    marginBottom: 20,
-    backgroundColor: "#fff",
-    width: 70,
-    height: 70,
-
-    borderRadius: 35,
-    justifyContent: "center",
-    alignItems: "center",
-    elevation: 10,
-    shadowColor: "gray",
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.8,
-    shadowRadius: 15,
-    marginBottom: 30,
-  },
-  Innercircle: {
-    elevation: 10,
-    shadowColor: "gray",
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.8,
-    shadowRadius: 15,
-    width: 65,
-    height: 65,
-    borderRadius: 65 / 2,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  ImgStyle: {
-    width: 25,
-    tintColor: "#fff",
-    height: 25,
-    resizeMode: "contain",
-  },
+ 
 });

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Image, View, Pressable, TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { Image, View, TouchableOpacity, Text, StyleSheet } from 'react-native';
 import { icons } from '../assets/icons';
 import { useTheme } from '@react-navigation/native';
 import { string } from '../utils/global/constants';

@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, Image } from "react-native";
 import React from "react";
 import { icons } from "../assets/icons";
-import { fontSize, height, width } from "../assets/Constant/fontsAndColors";
+import { fontSize, height, width } from "../assets/constant/fontsAndColors";
 import { useTheme } from "@react-navigation/native";
 import { string } from "../utils/global/constants";
 

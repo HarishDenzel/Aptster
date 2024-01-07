@@ -1,7 +1,7 @@
 //import liraries
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TextInput, TextInputProps, Image, Pressable ,TouchableOpacity} from 'react-native';
-import { fontSize } from '../../assets/Constant/fontsAndColors';
+import { fontSize } from '../../assets/constant/fontsAndColors';
 import { icons } from '../../assets/icons';
 import { string } from '../../utils/global/constants';
 

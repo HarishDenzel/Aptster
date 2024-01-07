@@ -1,6 +1,6 @@
 import { Pressable, StyleSheet, Text } from "react-native";
 import React from "react";
-import { height, width } from "../../assets/Constant/fontsAndColors";
+import { Basic_Viewdimension, height, width } from "../../assets/constant/fontsAndColors";
 import { string } from "../../utils/global/constants";
 
 export default function Button(props:any) {
@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     alignSelf: "center",
+    borderRadius:Basic_Viewdimension.VD_BorderRadius
   },
   label: { color: "#fff", fontWeight: "800" },
 });

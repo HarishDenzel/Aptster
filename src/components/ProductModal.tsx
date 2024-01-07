@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, TouchableOpacity,ScrollView } from "react-native";
-import React, { useState } from "react";
+import React from "react";
 import Modals from "./common/Modal";
 import Icon from "./common/Icon";
 import { icons } from "../assets/icons";
@@ -8,7 +8,7 @@ import {
   fontSize,
   height,
   width,
-} from "../assets/Constant/fontsAndColors";
+} from "../assets/constant/fontsAndColors";
 import { SliderBox } from "react-native-image-slider-box";
 import Location_label from "./LocationLabel";
 import Price_card from "./PriceCard";
@@ -80,7 +80,7 @@ export default function ProductModal(props: any) {
             <Location_label row={true} />
             <View style={{ height: View_Spacing.VS_W1 }} />
             <Price_card />
-            <View style={{ height: View_Spacing.VS_W1 }} />
+            <View style={{ height: View_Spacing.VS_W2 }} />
             <Button />
 
             <DualButton />

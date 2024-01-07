@@ -12,35 +12,35 @@ export default function SearchScreen() {
   const { colors } = useTheme();
   const [show, setShow] = useState(false);
   const [searchText, setSearchText] = useState("");
-  const [tempData, setTempData] = useState();
-  const [like, setLike] = useState(false);
+  const [filterData, setFilterData] = useState();
+
   const textInputRef = useRef(null);
-  const [json, setJson] = useState();
+  const [productData, setProductData] = useState();
   useEffect(() => {
-    setJson([...product]);
+    setProductData([...product]);
   }, []);
 
   const searchData = (text: string) => {
-    const newData = product.filter((item) => {
-      const itemData = item.name.toUpperCase();
+    const searchKey = product.filter((item) => {
+      const filterItem = item.name.toUpperCase();
       const textData = text.toUpperCase();
-      return itemData.indexOf(textData) > -1;
+      return filterItem.indexOf(textData) > -1;
     });
 
     setSearchText(text);
-    setTempData(newData);
+    setFilterData(searchKey);
   };
 
   const _likeTrigger = (item: any) => {
-    const newData = json.map((i) => {
+    const searchKey = productData.map((i) => {
       if (i.id === item.id) {
         return { ...i, isLike: !i.isLike };
       }
       return i;
     });
-    setJson([...newData]);
+    setProductData([...searchKey]);
   };
-console.log(json)
+
   return (
     <>
       <View style={styles.con}>
@@ -53,7 +53,7 @@ console.log(json)
           onChangeText={(text) => searchData(text)}
         />
         <FlatList
-          data={tempData == null ? json : tempData}
+          data={filterData == null ? productData : filterData}
           renderItem={({ item, index }) => {
             return (
               <Card
