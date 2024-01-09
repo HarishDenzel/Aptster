@@ -59,7 +59,7 @@ export default function HomeScreen(props: any) {
             imageLoadingColor="#2196F3"
           />
           <View style={styles.catContainer}>
-            <TouchableOpacity onPress={() => props.navigation.navigate('AllCatergories')} style={styles.catHeader}>
+            <TouchableOpacity onPress={() => props.navigation.navigate('AllCatergories',{name:'Automotive'})} style={styles.catHeader}>
               <Text style={styles.catHeadText}>{string.allCatergories}</Text>
               <Text style={styles.catSubText}>{string.viewAll}</Text>
             </TouchableOpacity>
