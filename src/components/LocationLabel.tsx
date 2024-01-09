@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { icons } from "../assets/icons";
-import { fontSize } from "../assets/Constant/fontsAndColors";
+import { fontSize } from "../assets/constant/fontsAndColors";
 import Icon from "./common/Icon";
 import { string } from "../utils/global/constants";
 

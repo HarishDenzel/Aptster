@@ -89,7 +89,7 @@ const View_Spacing = {
 const Basic_Viewdimension = {
   VD_BorderWidth: (width / 100) * 0.5,
   VD_Text_BorderWidth: (width / 100) * 0.3,
-  VD_BorderRadius: (width / 100) * 3,
+  VD_BorderRadius: (width / 100) * 1,
   VD_TextInput: (height / 100) * 6.5,
   VD_letterSpacing: (width / 100) * 0.2,
   VD_letterSpacing_2: (width / 100) * 0.1,
