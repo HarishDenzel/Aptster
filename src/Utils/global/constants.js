@@ -34,6 +34,7 @@
     bought:"bought",
     //Header
     currentLocation:"Current Location",
-    categories:"Categories"
+    categories:"Categories",
+    hightlight:'Hightlight'
  }
 

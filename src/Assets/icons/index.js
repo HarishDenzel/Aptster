@@ -12,7 +12,6 @@ export const icons = {
   support: require("./support.png"),
   support_fill: require("./support_fill.png"),
   //Header assets
-  menu: require("./menu.png"),
   dropDown: require("./dropDown.png"),
   badge: require("./badge.png"),
   //Homescreen
@@ -26,5 +25,5 @@ export const icons = {
   map: require("./map.png"),
   kart: require("./kart.png"),
   share: require("./share.png"),
-  back: require("./back.png"),
+  
 };

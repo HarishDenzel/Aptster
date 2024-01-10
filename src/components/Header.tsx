@@ -3,6 +3,7 @@ import { Image, View, TouchableOpacity, Text, StyleSheet } from 'react-native';
 import { icons } from '../assets/icons';
 import { useTheme } from '@react-navigation/native';
 import { string } from '../utils/global/constants';
+import Vector from '../assets/Vector';
 // import { Octicons, AntDesign, SimpleLineIcons, FontAwesome5 } from '@expo/vector-icons';
 
 const Header = (props: any) => {
@@ -16,7 +17,7 @@ const Header = (props: any) => {
         <View style={{ backgroundColor: '#ffff', padding: 5, alignItems: 'center', flexDirection: "row", paddingVertical: 10, paddingHorizontal: 10 }}>
             <View >
                 <TouchableOpacity onPress={openMyDrawer} >
-                    <Image source={isBack ? icons.back : icons.menu} style={isBack ? styles.back : styles.menu} />
+                    <Vector.MaterialIcons name={ isBack ? "arrow-back": "menu"} size={20} color="#000"  />
                 </TouchableOpacity>
             </View>
             {isBack ?

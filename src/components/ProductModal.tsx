@@ -14,6 +14,7 @@ import Location_label from "./LocationLabel";
 import Price_card from "./PriceCard";
 import Button from "./common/Button";
 import DualButton from "./common/DualButton";
+import { string } from "../utils/global/constants";
 export default function ProductModal(props: any) {
   const { show, onDismiss,bannerList } = props;
 
@@ -85,7 +86,7 @@ export default function ProductModal(props: any) {
 
             <DualButton />
             <View style={{ paddingTop: (height / 100) * 2 }}>
-              <Text style={styles.label}>{"Hightlight"}</Text>
+              <Text style={styles.label}>{string.hightlight}</Text>
               <Text style={{ color: "#000", paddingTop: 10 }}>
                 {
                   "Welcome to Mystique Salon, where beauty meets enchantment. Our salon is more than just a place to get a haircut or a manicure; it's a sanctuary for transformation and rejuvenation. Step into a world of beauty, sophistication, and allure, where our dedicated team of skilled professionals is committed to enhancing your natural radiance."
