@@ -116,9 +116,16 @@ const allCatergoriesList = [
 ]
 const bannerList =
   ['https://aptster-images.s3.us-east-2.amazonaws.com/restaurant.png', 'https://aptster-images.s3.us-east-2.amazonaws.com/restaurant.png']
+
+  const headerData = {
+    address:"15A,James Street",
+    rewards:'BRONZE',
+    points:'0 POINTS'
+  }
 export {
   product,
   bottom_data,
   allCatergoriesList,
-  bannerList
+  bannerList,
+  headerData
 }

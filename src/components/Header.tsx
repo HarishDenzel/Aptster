@@ -4,6 +4,7 @@ import { icons } from '../assets/icons';
 import { useTheme } from '@react-navigation/native';
 import { string } from '../utils/global/constants';
 import Vector from '../assets/Vector';
+import { headerData } from '../utils/enum/mock';
 // import { Octicons, AntDesign, SimpleLineIcons, FontAwesome5 } from '@expo/vector-icons';
 
 const Header = (props: any) => {
@@ -35,7 +36,7 @@ const Header = (props: any) => {
                             <View style={{ flexDirection: "row", alignItems: "center" }}>
                                 <View>
                                     <Text style={{ fontWeight: '400', fontSize: 12, color: '#1E1E1E' }}>
-                                        {"15A,James Street"}
+                                        {headerData.address}
                                     </Text>
                                 </View>
                                 <Image source={icons.dropDown} style={{ height: 10, width: 10, resizeMode: 'contain', marginHorizontal: 5 }} />
@@ -43,8 +44,8 @@ const Header = (props: any) => {
                         </View>
                     </View>
                     <View style={{ margin: 2 }}>
-                        <Text style={{ fontWeight: '400', fontSize: 10, color: 'black' }}> {"BRONZE"} </Text>
-                        <Text style={{ fontWeight: '500', fontSize: 8, color: '#4B5563' }}> {"0 POINTS"}</Text>
+                        <Text style={{ fontWeight: '400', fontSize: 10, color: 'black' }}> {headerData.rewards} </Text>
+                        <Text style={{ fontWeight: '500', fontSize: 8, color: '#4B5563' }}> {headerData.points}</Text>
                     </View>
                     <Image source={icons.badge} style={{ height: 24, width: 24, resizeMode: 'contain' }} />
                 </>

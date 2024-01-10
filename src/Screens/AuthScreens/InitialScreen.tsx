@@ -3,6 +3,7 @@ import React, { Component, useEffect } from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import { icons } from '../../assets/icons';
 import { StackActions } from '@react-navigation/native';
+import { string } from '../../utils/global/constants';
 
 // create a component
 const InitialScreen = (props: any) => {
@@ -28,8 +29,7 @@ const InitialScreen = (props: any) => {
                 />
             </View>
             <View style={styles.logoContainer}>
-
-                <Text style={styles.mainFont}>APTSTER</Text>
+                <Text style={styles.mainFont}>{string.appName}</Text>
             </View>
         </View>
     );

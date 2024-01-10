@@ -1,5 +1,5 @@
-import { StyleSheet, Text, View, TouchableOpacity,ScrollView } from "react-native";
-import React from "react";
+import { StyleSheet, Text, View, TouchableOpacity, ScrollView } from "react-native";
+import React, { useState } from "react";
 import Modals from "./common/Modal";
 import Icon from "./common/Icon";
 import { icons } from "../assets/icons";
@@ -10,28 +10,34 @@ import {
   width,
 } from "../assets/constant/fontsAndColors";
 import { SliderBox } from "react-native-image-slider-box";
-import Location_label from "./LocationLabel";
+import Locationlabel from "./LocationLabel";
 import Price_card from "./PriceCard";
 import Button from "./common/Button";
 import DualButton from "./common/DualButton";
 import { string } from "../utils/global/constants";
 export default function ProductModal(props: any) {
-  const { show, onDismiss,bannerList } = props;
+  const { show, onDismiss, bannerList } = props;
+  const [ProductDetails, setProductDetails] = useState([
+    {
+      title: "Mystique Salon",
+      description: "Welcome to Mystique Salon, where beauty meets enchantment. Our salon is more than just a place to get a haircut or a manicure; it's a sanctuary for transformation and rejuvenation. Step into a world of beauty, sophistication, and allure, where our dedicated team of skilled professionals is committed to enhancing your natural radiance."
+    }
+  ])
 
   return (
     <Modals visible={show}>
       <TouchableOpacity onPress={onDismiss} style={styles.second_con} />
       <View style={styles.con}>
-      <View style={{ alignSelf: "center", flex: 0.05 }}>
-          <Icon 
-          icon={icons.modal}
-           height={20}
+        <View style={{ alignSelf: "center", flex: 0.05 }}>
+          <Icon
+            icon={icons.modal}
+            height={20}
             width={20}
-             />
+          />
         </View>
         <View style={styles.header_con}>
           <View style={{ flex: 0.7, justifyContent: "center" }}>
-            <Text style={styles.header_text}>{"Mystique Salon"}</Text>
+            <Text style={styles.header_text}>{ProductDetails[0].title}</Text>
           </View>
           <View
             style={{
@@ -60,7 +66,6 @@ export default function ProductModal(props: any) {
               circleLoop
               resizeMethod={"resize"}
               resizeMode={"cover"}
-              paginationBoxStyle={styles.pageination}
               dotStyle={{
                 width: 20,
                 height: 6,
@@ -78,7 +83,7 @@ export default function ProductModal(props: any) {
             />
           </View>
           <View style={{ padding: 10 }}>
-            <Location_label row={true} />
+            <Locationlabel row={true} />
             <View style={{ height: View_Spacing.VS_W1 }} />
             <Price_card />
             <View style={{ height: View_Spacing.VS_W2 }} />
@@ -89,7 +94,7 @@ export default function ProductModal(props: any) {
               <Text style={styles.label}>{string.hightlight}</Text>
               <Text style={{ color: "#000", paddingTop: 10 }}>
                 {
-                  "Welcome to Mystique Salon, where beauty meets enchantment. Our salon is more than just a place to get a haircut or a manicure; it's a sanctuary for transformation and rejuvenation. Step into a world of beauty, sophistication, and allure, where our dedicated team of skilled professionals is committed to enhancing your natural radiance."
+                  ProductDetails[0].description
                 }
               </Text>
             </View>

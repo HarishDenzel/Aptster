@@ -5,14 +5,13 @@ import { fontSize } from "../assets/constant/fontsAndColors";
 import Icon from "./common/Icon";
 import { string } from "../utils/global/constants";
 
-export default function Location_label(props: any) {
+export default function Locationlabel(props: any) {
   const { row } = props;
   return (
     <View>
       <View style={row ? styles.con1 : styles.con}>
         <View style={styles.sub_con}>
           <Icon icon={icons.location} height={13} width={13} />
-
           <Text style={styles.label}>{"Anytown"}</Text>
           {row && <Text style={styles.distance_row}>{"2 km"}</Text>}
         </View>

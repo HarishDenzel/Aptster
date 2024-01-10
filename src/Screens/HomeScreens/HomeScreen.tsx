@@ -37,7 +37,7 @@ export default function HomeScreen(props: any) {
           <View style={styles.welcomeCon}>
             <View style={styles.welcomesub}>
               <Text style={styles.headText}>{string.hello}</Text>
-              <Text style={styles.subText}>Harish !</Text>
+              <Text style={styles.subText}>{string.userName}</Text>
             </View>
             <Text style={styles.notesText}>{string.notes}</Text>
           </View>

@@ -56,5 +56,5 @@ export const CustomTab = () => {
   );
 };
 const styles = StyleSheet.create({
- 
+
 });

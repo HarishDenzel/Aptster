@@ -16,11 +16,13 @@
  
  //HomeScreen
  export const string = {
+    appName:"APTSTER",
     hello : "Hello",
     notes : "What you are looking for\ntoday?",
     searchPlaceholder: "Search for “House keeping” deals",
     allCatergories:"All Catergories",
     viewAll : "View all",
+    userName:'Harish !',
 
     //components
     buyNow:"Buy Now",

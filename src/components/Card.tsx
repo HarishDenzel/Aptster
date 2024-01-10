@@ -18,7 +18,7 @@ import {
 import { SliderBox } from "react-native-image-slider-box";
 import { icons } from "../assets/icons";
 import Price_card from "./PriceCard";
-import Location_label from "./LocationLabel";
+import Locationlabel from "./LocationLabel";
 import { useTheme } from "@react-navigation/native";
 import { string } from "../utils/global/constants";
 import { bannerList } from "../utils/enum/mock";
@@ -31,14 +31,12 @@ export default function Card(props: any) {
   const styles = makeStyles(colors);
   return (
     <TouchableOpacity onPress={onPress}>
-    
       <View style={styles.space} />
       <View style={styles.card_con}>
         <View style={styles.header_con}>
           <Text style={styles.header_text}>{title}</Text>
-          <Location_label />
+          <Locationlabel />
         </View>
-
         <View style={styles.img_con}>
           <SliderBox
             images={bannerList}
@@ -46,7 +44,6 @@ export default function Card(props: any) {
             onCurrentImagePressed={onPress}
             dotColor="#FF8C00"
             inactiveDotColor="#90A4AE"
-            //paginationBoxVerticalPadding={20}
             autoplay
             circleLoop
             resizeMethod={"resize"}
@@ -68,12 +65,10 @@ export default function Card(props: any) {
             />
           </Pressable>
         </View>
-
         <View style={styles.footer}>
           <Price_card />
           <View style={styles.sold_con}>
             <Text style={styles.sold_text}>{string.sold + " 140"}</Text>
-
             <View style={{ flexDirection: "row", alignItems: "center" }}>
               <View style={styles.ends_con}>
                 <Image source={icons.timer} style={styles.timer} />
@@ -83,7 +78,6 @@ export default function Card(props: any) {
           </View>
         </View>
       </View>
-      {/* <View style={styles.space} /> */}
     </TouchableOpacity>
   );
 }
